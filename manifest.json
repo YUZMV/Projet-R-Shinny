@@ -1,5 +1,25 @@
 {
   "name": "Projet-R-Shinny",
   "version": "1.0.0",
-  "description": "Manifest file for Projet-R-Shinny"
+  "description": "Application Shiny pour la prédiction du risque d'arrêt cardiaque",
+  "runtime": "R",
+  "dependencies": {
+    "packages": [
+      "shiny",
+      "shinydashboard",
+      "tidyverse",
+      "plotly",
+      "shinyauthr",
+      "shinyjs",
+      "DT",
+      "randomForest"
+    ]
+  },
+  "files": [
+    "ui.R",
+    "server.R",
+    "global.R",
+    "models/rf_heart_failure_model.rds",
+    "data/Medicaldataset_clean.csv"
+  ]
 }
