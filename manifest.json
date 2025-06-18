@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Application Shiny pour la prédiction du risque d'arrêt cardiaque",
   "runtime": "R",
+  "r_version": "4.2.0",
   "dependencies": {
     "packages": [
       "shiny",
