@@ -13,7 +13,9 @@
       "shinyauthr",
       "shinyjs",
       "DT",
-      "randomForest"
+      "randomForest",
+      "caret",
+      "rsconnect"
     ]
   },
   "files": [
