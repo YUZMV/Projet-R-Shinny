@@ -1,0 +1,72 @@
+---
+title: "Untitled"
+author: "GNONSON B K M"
+date: "2025-06-16"
+output: html_document
+---
+
+```{r warning=FALSE}
+library(tidyverse)
+library(randomForest)
+library(caret)
+
+```
+
+
+```{r}
+# Chargement données
+data <- read.csv("../data/Medicaldataset_clean.csv")
+data
+
+```
+
+
+```{r}
+# Transformer 'result' en facteur (0=negatif, 1=positif)
+data <- data %>% mutate(result = factor(result, levels = c(0,1)))
+data
+
+```
+
+
+
+```{r}
+# Séparer en train/test (80/20)
+set.seed(123)
+train_index <- createDataPartition(data$result, p = 0.8, list = FALSE)
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+
+# Affichage du train_data
+train_data
+
+```
+
+
+
+
+```{r}
+# Entraîner Random Forest
+rf_model <- randomForest(result ~ age + gender + heart_rate + systolic_blood_pressure + 
+                         diastolic_blood_pressure + blood_sugar + ck_mb + troponin, 
+                         data = train_data, ntree = 500, importance = TRUE)
+
+```
+
+
+```{r}
+# Évaluer sur test
+pred <- predict(rf_model, test_data, type = "prob")[,2]  # probabilité classe 1
+roc_obj <- pROC::roc(test_data$result, pred)
+print(paste("AUC test RF:", pROC::auc(roc_obj)))
+
+```
+
+
+
+```{r}
+# Sauvegarder modèle
+saveRDS(rf_model, "../models/rf_heart_failure_model.rds")
+```
+

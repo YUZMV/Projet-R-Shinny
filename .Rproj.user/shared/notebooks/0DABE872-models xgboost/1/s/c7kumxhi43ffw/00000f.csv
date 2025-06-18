@@ -1,0 +1,2 @@
+"0","# Sauvegarder modèle"
+"0","saveRDS(rf_model, ""../models/rf_heart_failure_model.rds"")"

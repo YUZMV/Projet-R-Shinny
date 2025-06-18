@@ -1,0 +1,6 @@
+"0","# Vérification des valeurs manquantes par colonne"
+"0","missing_values <- cleaned_data %>%"
+"0","  summarise(across(everything(), ~sum(is.na(.)))) %>%"
+"0","  pivot_longer(everything(), names_to = ""variable"", values_to = ""missing_count"")"
+"0",""
+"0","print(missing_values)"

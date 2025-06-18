@@ -1,0 +1,3 @@
+"0","# Chargement données"
+"0","data <- read.csv(""../data/Medicaldataset_clean.csv"")"
+"0","data"

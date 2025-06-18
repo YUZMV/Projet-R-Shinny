@@ -1,0 +1,12 @@
+"0","# Évaluer sur test"
+"0","pred <- predict(rf_model, test_data, type = ""prob"")[,2]  # probabilité classe 1"
+"0","roc_obj <- pROC::roc(test_data$result, pred)"
+"2","Setting levels: control = 0, case = 1
+"
+"2","Setting direction: controls < cases
+"
+"0","print(paste(""AUC test RF:"", pROC::auc(roc_obj)))"
+"1","[1]"
+"1"," ""AUC test RF: 0.994407774110744"""
+"1","
+"

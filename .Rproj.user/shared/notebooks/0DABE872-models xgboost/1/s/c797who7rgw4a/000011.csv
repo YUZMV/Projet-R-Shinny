@@ -1,0 +1,3 @@
+"0","# Transformer 'result' en facteur (0=negatif, 1=positif)"
+"0","data <- data %>% mutate(result = factor(result, levels = c(0,1)))"
+"0","data"

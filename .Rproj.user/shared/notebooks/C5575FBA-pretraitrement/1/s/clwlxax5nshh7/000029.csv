@@ -1,0 +1,2 @@
+"0","heart_data <- read.csv(""../data/Medicaldataset.csv"")"
+"0","head(heart_data)"

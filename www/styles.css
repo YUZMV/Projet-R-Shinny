@@ -1,0 +1,116 @@
+/* ------ Couleurs générales ------ */
+body, .content-wrapper, .right-side {
+    background-color: #f5f7fa !important;
+    color: #2c3e50;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* ------ Sidebar ------ */
+.skin-blue .main-sidebar {
+    background-color: #2c3e50;
+}
+.skin-blue .main-sidebar .sidebar a {
+    color: #ecf0f1;
+}
+.skin-blue .main-sidebar .sidebar a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+.skin-blue .main-sidebar .sidebar .active a {
+    background-color: #1abc9c;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ------ Header ------ */
+.skin-blue .main-header .logo {
+    background-color: #1abc9c;
+    color: white;
+    font-weight: bold;
+}
+.skin-blue .main-header .navbar {
+    background-color: #16a085;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #138d75;
+}
+
+/* ------ Boxes ------ */
+.box {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.box.box-primary {
+    border-top-color: #1abc9c;
+}
+.box.box-info {
+    border-top-color: #3498db;
+}
+.box-header {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ------ ValueBoxes ------ */
+.small-box {
+    border-radius: 12px;
+}
+.small-box > .inner {
+    font-weight: bold;
+}
+.small-box .icon {
+    opacity: 0.3;
+}
+.bg-red {
+    background-color: #e74c3c !important;
+}
+.bg-blue {
+    background-color: #3498db !important;
+}
+.bg-green {
+    background-color: #2ecc71 !important;
+}
+
+/* ------ Boutons ------ */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 500;
+}
+.btn-primary {
+    background-color: #1abc9c;
+    border-color: #16a085;
+}
+.btn-primary:hover {
+    background-color: #16a085;
+}
+
+/* ------ Titres ------ */
+h2, .box-title {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* ------ Inputs ------ */
+select, input, .form-control, .selectize-input {
+    border-radius: 8px !important;
+}
+
+/* ------ Plotly Chart ------ */
+.js-plotly-plot .plot-container .svg-container {
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+/* ------ Footer ------ */
+.main-footer {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ------ Animation hover sur menu ------ */
+.sidebar-menu > li > a:hover {
+    transform: translateX(4px);
+    transition: all 0.2s ease;
+}

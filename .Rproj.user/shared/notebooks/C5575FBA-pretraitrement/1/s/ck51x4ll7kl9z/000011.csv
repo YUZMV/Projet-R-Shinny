@@ -1,0 +1,5 @@
+"0","# Nettoyer les noms de colonnes (minuscules, underscore, pas d'espaces)"
+"0","cleaned_data <- heart_data %>%"
+"0","  janitor::clean_names()"
+"0",""
+"0","head(cleaned_data)"

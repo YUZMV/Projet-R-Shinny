@@ -1,0 +1,2 @@
+"0","# Sauvegarder le dataset propre"
+"0","write_csv(cleaned_data, ""../data/Medicaldataset_clean.csv"")"

@@ -1,0 +1,63 @@
+---
+title: "Prétraitement"
+author: "GNONSON B K M"
+date: "2025-06-16"
+output: html_document
+---
+
+```{r}
+heart_data <- read.csv("../data/Medicaldataset.csv")
+head(heart_data)
+```
+
+
+```{r}
+colnames(heart_data)
+```
+
+
+```{r}
+# Nettoyer les noms de colonnes (minuscules, underscore, pas d'espaces)
+cleaned_data <- heart_data %>%
+  janitor::clean_names()
+
+head(cleaned_data)
+
+```
+
+
+```{r}
+# Vérification des valeurs manquantes par colonne
+missing_values <- cleaned_data %>%
+  summarise(across(everything(), ~sum(is.na(.)))) %>%
+  pivot_longer(everything(), names_to = "variable", values_to = "missing_count")
+
+print(missing_values)
+```
+
+```{r}
+str(cleaned_data)
+```
+
+
+```{r}
+# Convertir la colonne 'result' en facteur binaire 0/1 (negative=0, positive=1)
+cleaned_data <- cleaned_data %>%
+  mutate(result = case_when(
+    tolower(result) == "negative" ~ 0,
+    tolower(result) == "positive" ~ 1,
+    TRUE ~ NA_real_
+  ))
+
+head(cleaned_data)
+```
+
+```{r}
+# Sauvegarder le dataset propre
+write_csv(cleaned_data, "../data/Medicaldataset_clean.csv")
+```
+
+```{r}
+colnames(cleaned_data)
+```
+

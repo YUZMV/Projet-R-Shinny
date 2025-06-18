@@ -1,0 +1,5 @@
+"0","# Entraîner Random Forest"
+"0","rf_model <- randomForest(result ~ age + gender + heart_rate + systolic_blood_pressure + "
+"0","                         diastolic_blood_pressure + blood_sugar + ck_mb + troponin, "
+"0","                         data = train_data, ntree = 500, importance = TRUE)"
+"0",""
