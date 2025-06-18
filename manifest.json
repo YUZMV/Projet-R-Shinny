@@ -20,7 +20,7 @@
     "ui.R",
     "server.R",
     "global.R",
-    "models/rf_heart_failure_model.rds",
-    "data/Medicaldataset_clean.csv"
+    "./models/rf_heart_failure_model.rds",
+    "./data/Medicaldataset_clean.csv"
   ]
 }
